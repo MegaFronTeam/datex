@@ -7,6 +7,10 @@
 	fill: currentColor;
 }
 
+.icon-arrow-right-top {
+	font-size:math.div(12,10)*1rem;
+	width: math.div(12,12)*1em;
+}
 .icon-basket {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(22,24)*1em;
@@ -20,6 +24,10 @@
 	width: math.div(24,24)*1em;
 }
 .icon-instagram {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-phone {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }

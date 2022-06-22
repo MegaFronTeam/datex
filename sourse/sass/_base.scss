@@ -86,6 +86,9 @@ body {
 		&::before {
 			z-index: 999;
 			opacity: 0.76;
+			@include media-breakpoint-down(lg){
+				top: rem(61);
+			}
 		}
 	}
 }
@@ -94,6 +97,9 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 	// display: flex;
 	// flex-direction: row;
 	// /	overflow: scroll;
@@ -375,6 +381,7 @@ img.img-bg,
 
 a {
 	@include mt;
+	text-decoration: none ;
 }
 
 img.img-bg,

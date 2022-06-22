@@ -1,46 +1,84 @@
-.menu{
+.menu {
 	@include media-breakpoint-up(lg) {
-
-		display: flex;
 		text-align: center;
 		@include roww(20px);
 		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: row;
 	}
-
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-down(lg) {
+		align-items: center;
+		padding-bottom: rem(20);
+	}
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-	li{
-		
+	li {
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
 	}
-	a{
+	a {
+		font-family: "Proxima Nova";
+		font-weight: 600;
+		position: relative;
+		transition-duration: 0.4s;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		font-size: rem(14);
+		color: $secondary;
+		--a-color: transparent;
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(14);
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 1.04vw;
+			padding-right: 1.04vw;
+			margin-bottom: rem(8);
+			&::after {
+				content: "";
+				position: absolute;
+				height: 0;
+				width: rem(30);
+				max-width: 100%;
+				transition-duration: 0.4s;
+				border-top: 2px solid var(--a-color);
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		&:hover,
+		&.active {
+			color: $body-color;
+			--a-color: #{$primary};
+		}
 	}
 }
 
-
-
 .toggle-menu-mobile {
 	--h: #{em(2)};
-	--color: #{$primary};
+	--color: #{$body-color};
 	--position: calc(var(--h) * 2);
 	&.on span {
 		--color: transparent;
 	}
 
-	&.on  { 
-		--position: 0; 
+	&.on {
+		--position: 0;
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
-	position: relative; 
-	font-size: 32px;
+	height: rem(24);
+	position: relative;
+	font-size: rem(24);
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -48,66 +86,71 @@
 		content: "";
 		position: absolute;
 		left: 0;
-	} 
+	}
 	span {
 		@include a-cent(y);
 		display: block;
 	}
 
-	span:before { 
+	span:before {
 		top: var(--position);
-		transform: rotate3d(0,0,1, var(--rotate, 0));
+		transform: rotate3d(0, 0, 1, var(--rotate, 0));
 	}
 
 	span:after {
 		bottom: var(--position);
-		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+		transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
 	}
 	span,
 	span:after,
 	span:before {
 		// width: 32px;
 		width: 1em;
-		height: var(--h);
+		height: 2px;
 		background-color: var(--color);
 		transition: all 0.3s;
-		backface-visibility: hidden; 
+		backface-visibility: hidden;
 		transform-origin: 50% 50%;
-	} 
+	}
+}
+.toggle-menu-mobile.on {
+	margin-left: -15%;
+	top: 0;
+	z-index: 9999;
+	span:after,
+	span:before {
+		--color: #{$body-color};
+	}
 }
 @include media-breakpoint-down(lg) {
-
-	
-
 	.menu-mobile {
+		background-color: $white;
 		position: fixed !important;
 		z-index: 999;
-		max-width: 85%;
+		max-width: 100%;
 		height: calc(var(--vh, 1vh) * 100);
-		width: 280px;
-		top: 0;
+		width: 100%;
+		top: rem(61);
 		// left: 0;
 		right: 0;
-		background-color: $body-bg;
-		&:not(.active){
-			transform: translate3d(120%, 0,0);
+		&:not(.active) {
+			transform: translate3d(120%, 0, 0);
 			--opacity: 0;
-			.toggle-menu-mobile{
+			.toggle-menu-mobile {
 				opacity: 0;
 			}
 		}
-		@include mt(.6s);
+		@include mt(0.6s);
 		will-change: transform;
 
-		
-		.toggle-menu-mobile { 
+		.toggle-menu-mobile {
 			margin-left: -15%;
-			position: absolute; 
+			position: absolute;
 			left: 0;
 			right: auto;
-			color: #FFF;
+			color: #fff;
 			top: 10px;
-			z-index: 9999; 
+			z-index: 9999;
 			span:after,
 			span:before {
 				--color: #ffffff;
@@ -119,17 +162,18 @@
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
 			height: 100%;
-			@include mt(.3s);
-			transition-delay: .4s;
+			@include mt(0.3s);
+			transition-delay: 0.4s;
 			opacity: var(--opacity);
+			display: flex;
+			flex-direction: column;
 		}
 
-		&.active { 
+		&.active {
 			.toggle-menu-mobile {
 				opacity: 1;
 			}
 		}
-
 
 		ul {
 			position: relative;
@@ -138,14 +182,13 @@
 		li {
 			display: block;
 			margin: 0;
-			border-top: 1px solid rgba(255, 255, 255, .13);
+			border-top: 1px solid rgba(255, 255, 255, 0.13);
 
 			a {
 				// font-size: 16px;
 
 				padding: 10px;
 				display: block;
-
 			}
 		}
 	}
