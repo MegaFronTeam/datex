@@ -484,3 +484,18 @@ h6 {
 	font-weight: 800;
 	line-height: 100%;
 }
+
+.btn {
+	font-family: "Proxima Nova";
+	padding: rem(18);
+	font-weight: 600;
+	line-height: 170%;
+	font-size: rem(14);
+	border-radius: 4px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.btn-primary {
+	color: $white !important;
+}

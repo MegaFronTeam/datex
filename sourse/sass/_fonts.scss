@@ -1,4 +1,4 @@
-$default-font: "roboto";
+$default-font: "IBM Plex Mono";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
@@ -7,6 +7,7 @@ $file-format: woff2;
 // If font from googlefont, next lines remove
 
 @include font-face ("Bebas Neue Pro", $addr + "BebasNeuePro-Bold", 800 ,$file-formats: $file-format);
+@include font-face ("Proxima Nova", $addr + "ProximaNova-Semibold", 600 ,$file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Bold/Roboto-Bold", bold, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
