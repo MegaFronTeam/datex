@@ -466,11 +466,25 @@ iframe {
 	// @include row-sw(10px, sm, 100px);
 }
 
-h1 {
+h1,h2 {
 	@include media-breakpoint-up(lg) {
-		font-size: rem(75);
+		font-size: rem(75) !important;
+		padding-right: rem(55);
+		&::after{
+			content:'';
+			position: absolute;
+			bottom: rem(8);
+			right: 0;
+			width: rem(45);
+			height: rem(52);
+			background-image: url('../img/svg/title-bg.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
 	}
-	font-size: rem(35);
+	font-size: rem(35) !important;
+	position: relative;
+	text-transform: uppercase;
 }
 h3 {
 	@include media-breakpoint-up(lg) {

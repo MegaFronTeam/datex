@@ -1,9 +1,30 @@
 mixin sDirections(data)
 	// start sDirections
-	+b.SECTION.sDirections.section#sDirections&attributes(attributes)
+	+b.sDirections.section#sDirections&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sDirections
-				
+			+b.section-title
+				h1 Ждем тебя в команде
+			+e.subtitle Выберите интересующее вас направление и изучите вакансии
 			.row
+				mixin item(title,job,pic)
+					.col-xl-4.col-lg-6
+						+b.direction-item(href="#")
+							+e.content
+								h3!=title
+								+e.job!=job
+								+e.btn
+									+e.btn-icon
+										+icon('arrow-right')
+									+e.btn-icon--mob
+										+icon('arrow-right-mob')
+							+e.bg-pic
+								img(src=`img/direction-item-bg-${pic}.png`, alt="")
+							+e.bg-pic--hover
+								img(src=`img/direction-item-bg-3-hover.png`, alt="")
+				+item(`Информационные технологии`,`4 вакансии`,`1`)
+				+item(`Развитие бизнеса и продажи`,`15 вакансий`,`2`)
+				+item(`руководители`,`2 вакансии`,`3`)
+				+item(`управление проектами`,`4 вакансии`,`4`)
+				+item(`Стажировка`,`4 вакансии`,`5`)
+				+item(`Управление процессами в офисе`,`4 вакансии`,`6`)
 	// end sDirections

@@ -4,11 +4,10 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/headerBlock/_headerBlock.pug
-include ../blocks/sForm/_sForm.pug
+include ../blocks/sRequest/_sRequest.pug
 include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sContact/_sContact.pug
-include ../blocks/sForm/_sForm.pug
 include ../blocks/sDirections/_sDirections.pug
 include ../blocks/footer/_footer.pug
 
@@ -26,6 +25,7 @@ block pagecontent
 	+header()
 		+top-nav(2)
 	+sDirections
+	+sRequest(`не нашли то, что искали?`,`Свяжитесь с нами и мы предложим вакансию для вас`,'оставить заявку')
 	+footer()
       
 

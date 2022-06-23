@@ -1,0 +1,10 @@
+mixin sRequest(title,caption,btn,link='#')
+	// start sRequest
+	+b.SECTION.sRequest.section#sRequest&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2!=title
+			+e.caption!=caption
+			+e.btn-wrap
+				a.btn.btn-primary(href=link)!=btn
+	// end sRequest
