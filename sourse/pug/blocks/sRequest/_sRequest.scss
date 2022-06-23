@@ -1,9 +1,10 @@
 // start .sRequest
 .sRequest {
 	--sPT: #{rem(50)};
-	--sPB: #{rem(0)};
+	--sPB: #{rem(20)};
 	@include media-breakpoint-up(lg){
 		--sTPB: #{rem(30)};
+		--sPB: #{rem(0)};
 	}
 	--sTPB: #{rem(20)};
 	&__row{
