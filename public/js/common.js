@@ -352,6 +352,25 @@ function eventHandler() {
 		},
 	}
 
+	const aboutSlider = new Swiper('.sAbout__slider--js', {
+		spaceBetween: 0,
+		slidesPerView: '1',
+		breakpoints:{
+			992:{
+				slidesPerView: '3',
+				spaceBetween: 20,
+			}
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		}
+	});
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
