@@ -1,0 +1,26 @@
+mixin sVacancies(data)
+	// start sVacancies
+	+b.sVacancies.section#sVacancies&attributes(attributes)
+		.container
+			mixin item(title,salary,pic,bonus)
+				+b.vacancy-item
+					+e.title-wrap
+						+e.title-block
+							h4!=title
+							if bonus
+								+e.bonus
+									img(src="img/svg/bonus.svg", alt="")
+									+e.bonus-title Вакансия с денежным бонусом за рекомендацию друга
+						+e.salary!=salary
+					+e.caption Разработка креативных концепций и&nbsp;их&nbsp;последующая визуализация. Разработка визуальной идентификации бренда, фирменного стиля. Дизайн шаблонов сайтов, лендингов, email-рассылок.
+					+e.date 21 мая 2021
+					+e.btn-wrap
+						a.btn.btn-primary(href="#") откликнуться
+						a.btn.btn-outline-primary(href="#") подробнее
+					+e.pic
+						img(src=`img/${pic}.png`, alt="")
+			+item(`Менеджер по сопровождению клиентов`,`от 50 000 ₽`,`handshake`)
+			+item(`Менеджер по продажам 1С (В2В)`,`100 000 ₽`,`fire`,true)
+			+item(`Программист 1С/Junior`,`от 40 000 ₽`,`glasses-man`)
+			+item(`HR менеджер`,`на собеседовании`,`briefcase`,true)
+	// end sVacancies

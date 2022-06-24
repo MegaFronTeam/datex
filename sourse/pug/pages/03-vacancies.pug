@@ -8,7 +8,7 @@ include ../blocks/sRequest/_sRequest.pug
 include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sContact/_sContact.pug
-include ../blocks/sDirections/_sDirections.pug
+include ../blocks/sVacancies/_sVacancies.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -24,8 +24,8 @@ block pagecontent
 	
 	+header()
 		+top-nav(2)
-	+page-head(`информационные технологии`,`16 вакансий`,`direction-item-bg-1.png`)
-	+sDirections
+	+page-head2(`информационные технологии`,`16 вакансий`,`direction-item-bg-1.png`,`Вакансии`)
+	+sVacancies
 	+sRequest(`не нашли то, что искали?`,`Свяжитесь с нами и мы предложим вакансию для вас`,'оставить заявку')
 	+footer()
       

@@ -40,3 +40,16 @@ mixin page-head(title,subtitle,pic)
 					+e.subtitle!=subtitle
 				+e.bg
 					img(src=`img/${pic}`, alt="")
+
+mixin page-head2(title,subtitle,pic,back)
+	+b.page-head
+		.container
+			+e.wrap
+				+e.title-block
+					+e.back(href="#")
+						+icon('chevron-left')
+						span!=back
+					h1!=title
+					+e.subtitle!=subtitle
+				+e.bg
+					img(src=`img/${pic}`, alt="")
