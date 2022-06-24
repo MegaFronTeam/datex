@@ -1,0 +1,36 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sRequest/_sRequest.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sIntership/_sIntership.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Стажировка в датекс'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav(3)
+	+page-head(`стажировка<br>в датекс`,`Стажировка&nbsp;&mdash; это возможность начать карьеру в&nbsp;IT еще до&nbsp;окончания ВУЗа. Стажировка проходит в&nbsp;нашем офисе и&nbsp;открыта для студентов любых курсов, а&nbsp;ее&nbsp;лучшие участники могут получить приглашение на&nbsp;работу.`,`direction-item-bg-5-lg.png`)
+	+sIntership
+	+sRequest(`заинтересовался?`,`Свяжись с нами и мы предложим вакансию для тебя`,'оставить заявку')
+	+footer()
+      
+
+
+
