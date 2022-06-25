@@ -470,17 +470,19 @@ h1,
 h2 {
 	@include media-breakpoint-up(lg) {
 		font-size: rem(75) !important;
-		padding-right: rem(55);
+		// padding-right: rem(55);
 		&::after {
 			content: "";
-			position: absolute;
-			bottom: rem(8);
-			right: 0;
-			width: rem(45);
+			// position: absolute;
+			// bottom: rem(8);
+			// right: 0;
+			width: rem(55);
 			height: rem(52);
 			background-image: url("../img/svg/title-bg.svg");
 			background-repeat: no-repeat;
 			background-size: contain;
+			background-position: right;
+			display: inline-block;
 		}
 	}
 	font-size: rem(40) !important;

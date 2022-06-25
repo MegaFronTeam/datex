@@ -34,22 +34,24 @@ mixin addblock()
 mixin page-head(title,subtitle,pic)
 	+b.page-head
 		.container
-			+e.wrap
-				+e.title-block
+			.row.align-items-center
+				.col-lg-6
 					h1!=title
 					+e.subtitle!=subtitle
-				+e.bg
-					img(src=`img/${pic}`, alt="")
+				.col-lg-6
+					+e.bg
+						img(src=`img/${pic}`, alt="")
 
 mixin page-head2(title,subtitle,pic,back)
 	+b.page-head
 		.container
-			+e.wrap
-				+e.title-block
+			.row.align-items-center
+				.col-lg-6
 					+e.back(href="#")
 						+icon('chevron-left')
 						span!=back
 					h1!=title
 					+e.subtitle!=subtitle
-				+e.bg
-					img(src=`img/${pic}`, alt="")
+				.col-lg-6
+					+e.bg
+						img(src=`img/${pic}`, alt="")

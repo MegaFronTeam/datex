@@ -74,22 +74,14 @@
 	@include media-breakpoint-up(lg) {
 		padding-top: 0;
 	}
-	&__wrap {
-		@include media-breakpoint-up(lg) {
-			flex-direction: row;
-			padding-top: 0;
-			gap: 20px;
-			justify-content: space-between;
-		}
-		align-items: center;
-		flex-direction: column;
-		display: flex;
+	.row{
+		--bs-gutter-x:#{rem(20)};
 	}
-	&__title-block {
-		@include media-breakpoint-up(lg) {
-			width: 50%;
-		}
-	}
+	// &__title-block {
+	// 	@include media-breakpoint-up(lg) {
+	// 		width: 50%;
+	// 	}
+	// }
 	&__sub-title {
 		line-height: 150%;
 		@include media-breakpoint-up(lg) {
@@ -98,10 +90,6 @@
 		margin-top: rem(20);
 	}
 	&__bg {
-		@include media-breakpoint-up(lg) {
-			width: 50%;
-		}
-		width: 100%;
 		img {
 			width: 100%;
 			max-width: 100%;
