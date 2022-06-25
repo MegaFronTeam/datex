@@ -5,3 +5,4 @@
 1. <https://megafronteam.github.io/datex/public/06-internship.html>
 1. <https://megafronteam.github.io/datex/public/07-program.html>
 1. <https://megafronteam.github.io/datex/public/08-team.html>
+1. <https://megafronteam.github.io/datex/public/09-invite.html>
