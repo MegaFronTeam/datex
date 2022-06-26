@@ -7,9 +7,7 @@
 		--sPB: #{rem(80)};
 	}
 	&__row {
-		@include media-breakpoint-down(lg) {
-			// --bs-gutter-x: 0;
-		}
+		--bs-gutter-y: #{rem(60)};
 	}
 	&__head {
 		display: flex;
@@ -119,7 +117,7 @@
 		background-color: #FFFFFF;
 		border-radius: 4px;
 		width: 100vw;
-		margin-left: calc(-100vw + 100% + var(--bs-gutter-x) / 2);
+		margin-left: calc(((100vw - 100%) * -0.5) - var(--bs-gutter-x) / 2);
 		@include media-breakpoint-up(lg) {
 			margin-left: 0;
 			width: 100%;
