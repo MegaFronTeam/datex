@@ -119,4 +119,16 @@
 		}
 		margin-bottom: rem(20);
 	}
+	&--vacancies {
+		padding-top: rem(30);
+		padding-bottom: rem(20);
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(30);
+			padding-bottom: rem(30);
+		}
+	}
 }

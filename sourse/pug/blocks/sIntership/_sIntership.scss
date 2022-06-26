@@ -58,6 +58,16 @@
 			margin-bottom: rem(18);
 			text-transform: uppercase;
 			position: relative;
+			&::after {
+				content: '';
+				display: inline-block;
+				background-image: url('../img/svg/lines.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 16px;
+				height: 17px;
+				margin-left: rem(5);
+			}
 			img {
 				vertical-align: baseline;
 				margin-left: rem(5);
