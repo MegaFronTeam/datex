@@ -1,12 +1,10 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
+		+e.container.container
+			img(src="img/sContent-bg.png", alt="")
 			+b.section-title.text-center
-				h2 sContact
-				
-			.row
-			//- +e.policy-block
-			//- 	+e.title © Datexsoft 2022. Все права защищены.
-			//- 	+e.link(href="#") Политика конфиденциальности
+				h2 свяжитесь с нами
+				p Помогаем нашим клиентам добиваться успехов в бизнесе с помощью IT-технологий
+				+e.btn(href="#").btn.btn-primary оставить заявку
 	// end sContact

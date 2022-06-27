@@ -1,0 +1,154 @@
+// start .sAboutWork
+.sAboutWork {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(60)};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
+			
+		}
+	}
+	&__container {
+		position: relative;
+	}
+	.pencil {
+		position: absolute;
+		top: -37px;
+		right: calc(100% + 1px);
+		width: 100%;
+		max-width: rem(264);
+	}
+	.laptop {
+		position: absolute;
+		bottom: -42px;
+    left: calc(100% + -101px);
+		width: 100%;
+		max-width: rem(304);
+		@include media-breakpoint-up(sm) {
+			bottom: -87px;
+		}
+	}
+	&__col{
+
+	}
+	&__slide{
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+		@include media-breakpoint-up(md) {
+			border-radius: 4px;
+		}
+		&:hover {
+			&:before {
+				opacity: 0;
+			}
+			h3 {
+				&:before {
+					background-color: $primary;
+				}
+			}
+		}
+		&:before {
+			@include mt;
+			content: '';
+			position: absolute;
+			display: block;
+			height: 100%;
+			width:100%;
+			background-image: linear-gradient(0deg, rgba(36, 42, 63, 0.3), rgba(36, 42, 63, 0.3));
+			left: 0;
+			top: 0;
+			z-index: 2;
+		}
+		h3 {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: rem(40);
+			margin-bottom: 0;
+			z-index: 3;
+			text-align: center;
+			color: #fff;
+			// height: 82px;
+			// display: flex;
+   		// align-items: center;
+			&:before {
+				@include mt;
+				content: '';
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%) skewX(341deg);
+				top: -9px;
+				height: calc(100% + 18px);
+				width: 13px;
+				background-color: transparent;
+				z-index: -1;
+			}
+		}
+	}
+	&__img-wrap {
+		@include block(310,434);
+		@include media-breakpoint-up(sm) {
+			--ratio: 392/280;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.swiper-button-hand {
+		position: sticky;
+		display: inline-flex;
+		border: none;
+		--swiperBgDef: transparent;
+		--swiperBgDefHover: transparent;
+		--swiperArrowSize: auto;
+		--swiperColorDef: #fff;
+		.icon {
+			font-size: 20px;
+		}
+	}
+	&__wrap  {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: rem(20);
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+	&__circle {
+		position: relative;
+		display: inline-block;
+		border: 2px solid #555A6D;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		margin: 0 5px;
+		&::before {
+			content: '';
+			@include a-cent;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $primary;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAboutWork

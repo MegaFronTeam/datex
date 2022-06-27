@@ -1,6 +1,7 @@
 extends ../layout/main.pug
 
 include ../blocks/sImportant/_sImportant.pug
+include ../blocks/sAboutWork/_sAboutWork.pug
 
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
@@ -27,6 +28,7 @@ block pagecontent
 		+top-nav('', 'white')
 		+headerBlock().bg-dark
 		+sImportant().bg-darkest
+		+sAboutWork().bg-dark
 		+sContact.bg-darkest
 		+footer2()
 				

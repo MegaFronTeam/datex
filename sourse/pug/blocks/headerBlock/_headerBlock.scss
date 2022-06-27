@@ -15,17 +15,23 @@
 		position: relative;
 	}
 	&__col {
+		position: relative;
+		z-index: 2;
 		@include media-breakpoint-down(lg) {
 			text-align: center;
 		}
 	}
 	img {
+		position: relative;
+		z-index: 1;
 		width: 100%;
+		max-width: 846px;
 		@include media-breakpoint-up(lg) {
 			width: auto;
 			position: absolute;
 			right: -184px;
-			bottom: calc(((100vh - 100%) / -2) - 60px);
+			bottom: calc(((100vh - 100%) / -2));
+			// bottom: calc(((100vh - 100%) / -2) - 60px);
 		}
 		@include media-breakpoint-up(xl){
 			right: -104px;

@@ -2,9 +2,41 @@
 	// start .sContact
 .sContact {
 	position: relative;
-	padding-bottom: 233px;
-	@include media-breakpoint-up(lg) {
-		padding-bottom: 0;
+	padding-bottom: rem(280);
+	padding-top: rem(60);
+	@include media-breakpoint-up(md) {
+		padding-bottom: rem(90);
+	}
+	&__container {
+		position: relative;
+		img {
+			display: none;
+			@include media-breakpoint-up(lg) {
+				display: block;
+				width: 100%;
+				max-width: 1920px;
+				width: auto;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: calc(((100vh - 100%) / -2));
+			}
+		}
+	}
+	.section-title {
+		position: relative;
+		z-index: 2;
+		h2 {
+			margin-bottom: rem(30);
+		}
+		p {
+			margin-bottom: rem(50);
+			color: #ACAAC2;
+		}
+		&__btn {
+			width: 100%;
+			max-width: rem(225);
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

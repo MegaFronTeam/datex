@@ -3,13 +3,13 @@
 	--sPT: #{rem(40)};
 	--sPB: #{rem(30)};
 	// --sTPB: #{rem()};
+	overflow: hidden;
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 
 	}
 	&__container {
-		position: relative;
 		& > picture {
 			position: absolute;
 			left: 50%;
@@ -17,18 +17,24 @@
 			width: 100%;
 			bottom: calc(var(--sPB) * -1);
 			text-align: center;
+			z-index: 1;
 			@include media-breakpoint-up(lg) {
 				bottom: calc(((100vh - 100%) / -2) - 60px);
 				width: auto;
 			}
 			img {
+				width: 100%;
+				max-width: 320px;
 				@include media-breakpoint-up(lg) {
+					width: auto;
 					max-width: none;
 				}
 			}
 		}
 	}
 	.section-title{
+		position: relative;
+		z-index: 2;
 		margin-bottom: 0;
 		h2 {
 			margin-bottom: 0;

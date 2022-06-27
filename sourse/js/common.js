@@ -400,7 +400,7 @@ function eventHandler() {
 		scrollBar: false,
 		verticalCentered: true,
 		fixedElements: ['.top-nav', '.footer'],
-		anchors: ['header', 'sImportantBlock', 'sContactBlock'],
+		anchors: ['header', 'sImportantBlock', 'sAboutWorkBlock' ,'sContactBlock'],
 		// menu: '.menu'	,
 		// scrollBar: true,
 		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
@@ -428,6 +428,31 @@ function eventHandler() {
 		
 
 		// },
+	});
+
+	const sAboutWorkswiper = new Swiper('.sAboutWork__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 480px
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			// when window width is >= 640px
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			}
+		}
 	});
 
 };
