@@ -1,5 +1,7 @@
 extends ../layout/main.pug
 
+include ../blocks/sImportant/_sImportant.pug
+
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
@@ -24,7 +26,7 @@ block pagecontent
 	#fullpage.fullpage
 		+top-nav('', 'white')
 		+headerBlock().bg-dark
-		+sForm().bg-darkest
+		+sImportant().bg-darkest
 		+sContact.bg-darkest
 		+footer2()
 				

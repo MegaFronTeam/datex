@@ -1,10 +1,12 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
+		+e.container.container
 			.row
-				.col-lg-5
+				+e.col.col-lg-4
 					h1 Карьера в&nbsp;компании Датекс
 					p Помогаем нашим клиентам добиваться успехов в&nbsp;бизнесе с&nbsp;помощью IT-технологий
 					+e.btn(href="#").btn.btn-primary смотреть вакансии
+				.col
+					img(src="img/header-bg-2.png", alt='')
 	// end headerBlock

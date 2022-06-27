@@ -398,11 +398,9 @@ function eventHandler() {
 		recordHistory: false,
 		css3:true,
 		scrollBar: false,
-		// verticalCentered: false,
-		afterResponsive: function(){
-		},
+		verticalCentered: true,
 		fixedElements: ['.top-nav', '.footer'],
-		anchors: ['headerBlock', 'sForm', 'sContact'],
+		anchors: ['header', 'sImportantBlock', 'sContactBlock'],
 		// menu: '.menu'	,
 		// scrollBar: true,
 		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
@@ -419,7 +417,7 @@ function eventHandler() {
 		// },
 		// continuousVertical: true,
 		// autoScrolling: true,
-		// scrollOverflow: true,
+		scrollOverflow: false,
 		// scrollOverflowReset: true,
 		// scrollOverflowReset: true,
 		// afterRender: function () {

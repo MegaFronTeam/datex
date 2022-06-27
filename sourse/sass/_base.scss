@@ -615,6 +615,12 @@ h6 {
 	color: #fff;
 }
 
+.section {
+	@include media-breakpoint-down(lg) {
+		height: auto !important;
+	}
+}
+
 .fancybox__slide {
 	@include media-breakpoint-down(sm) {
 		padding: 0;

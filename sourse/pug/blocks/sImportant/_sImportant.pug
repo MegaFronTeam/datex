@@ -1,0 +1,12 @@
+mixin sImportant(data)
+	// start sImportant
+	+b.SECTION.sImportant.section#sImportant&attributes(attributes)
+		+e.container.container
+			picture
+				source(media='(max-width:992px)' srcset='img/sImportant-bg-sm.png')
+				img(src='img/sImportant-bg.png' alt='')
+
+			//- img(src="img/sImportant-bg.png", alt="")
+			+b.section-title.text-center
+				h2 Важнее всего&nbsp;&mdash;<br>талантливые люди,<br>разделяющие наши взгляды
+	// end sImportant
