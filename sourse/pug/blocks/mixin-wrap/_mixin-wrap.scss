@@ -74,8 +74,8 @@
 	@include media-breakpoint-up(lg) {
 		padding-top: 0;
 	}
-	.row{
-		--bs-gutter-x:#{rem(20)};
+	.row {
+		--bs-gutter-x: #{rem(20)};
 	}
 	// &__title-block {
 	// 	@include media-breakpoint-up(lg) {
@@ -113,8 +113,8 @@
 			color: $body-color !important;
 		}
 	}
-	h1{
-		@include media-breakpoint-up(lg){
+	h1 {
+		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(30);
 		}
 		margin-bottom: rem(20);
@@ -131,4 +131,44 @@
 			padding-bottom: rem(30);
 		}
 	}
+}
+
+.upload-field {
+	&__title {
+		position: relative;
+		top: unset;
+		margin-bottom: rem(16);
+	}
+	&__wrap {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			align-items: center;
+		}
+		flex-direction: column;
+	}
+	&__btn {
+		padding-top: rem(8);
+		padding-bottom: rem(8);
+		padding-left: rem(20);
+		padding-right: rem(20);
+		.icon {
+			font-size: rem(20);
+			margin-right: rem(5);
+		}
+		border-radius: rem(60);
+	}
+	&__input-wrap {
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(20);
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(20);
+	}
+	&__file-name {
+		line-height: calc(20 / 16);
+	}
+}
+.input-upload {
+	display: none;
 }
