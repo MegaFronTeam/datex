@@ -65,3 +65,15 @@ mixin page-head3(title, back)
 						+icon('chevron-left')
 						span!=back
 					h1!=title
+
+
+mixin upload-field(title)
+	+b.upload-field
+		+e.title.form-wrap__input-title!=title
+		+e.wrap
+			+e.input-wrap
+				input#input-upload.input-upload(type='file' name='file')
+				+e.LABEL.btn.btn.btn-outline-primary(for='input-upload')
+					+icon('clip')
+					span прикрепить
+			+e.file-name Название файла.pdf
