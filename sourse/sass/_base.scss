@@ -531,3 +531,91 @@ h6 {
 		color: $white;
 	}
 }
+
+
+.main-page {
+	&.fixed {
+		overflow: hidden !important;
+		&::before {
+			z-index: -1;
+		}
+	}
+	.toggle-menu-mobile {
+		--color: #fff;
+		&.on span {
+			&::before, &::after {
+				--color: #fff;
+			}
+		}
+	}
+	.top-nav {
+		border-bottom-color: #555A6D;
+		z-index: 3;
+		color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			position: fixed;
+			border-bottom: none;
+		}
+		&__tel-number {
+			color: #fff !important;
+		}
+		.menu a.active, .menu a:hover {
+			color: #fff;
+		}
+	}
+	.footer {
+		position: absolute;
+		left: 0;
+		bottom: rem(60);
+		width: 100%;
+		z-index: 2;
+		align-items: center;
+		padding-top: 0;
+		padding-bottom: 0;
+		@include media-breakpoint-up(lg) {
+			position: fixed;
+		}
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&__policy-block {
+			align-items: center;
+			text-align: center;
+			width: auto;
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+		}
+		&__title {
+			color: #fff;
+			font-size: rem(12);
+			font-weight: 400;
+		}
+		&__link {
+			color: #ACAAC2 !important;
+			&:hover {
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+.bg-dark {
+	background-color: #2A3148;
+	color: #fff;
+}
+
+.bg-darkest {
+	background-color: #252C42;
+	color: #fff;
+}
+
+.fp-watermark {
+	display: none;
+}

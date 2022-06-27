@@ -17,16 +17,21 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav(active) 
+mixin top-nav(active, logoWhite) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.row
 			.col-auto.d-lg-none
 				+menu-toggle()
 			.col-lg-auto.col
-				+e.logo
-					a(href="/")
-						img(src="img/svg/logo.svg", alt="")
+				if logoWhite
+					+e.logo
+						a(href="/")
+							img(src="img/svg/logoWhite.svg", alt="")
+				else
+					+e.logo
+						a(href="/")
+							img(src="img/svg/logo.svg", alt="")
 			+e.col.col-lg.col-auto
 				.menu-mobile.menu-mobile--js
 					.menu-mobile__inner

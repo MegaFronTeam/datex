@@ -7,3 +7,19 @@ mixin footer()
 		+e.policy-block
 			+e.title © Datexsoft 2022. Все права защищены.
 			+e.link(href="#") Политика конфиденциальности
+
+mixin footer2()
+	+b.FOOTER.footer
+		+e.city-block(href="#")
+			+e.icon-wrap
+				+icon('map-pin')
+			+e.text-wrap
+				+e.city самара
+				+e.text Посмотреть на карте
+		+e.policy-block
+			+e.title © Datexsoft 2022. Все права защищены.
+			+e.link(href="#") Политика конфиденциальности
+		+e.main-site(href="#")
+			| основной сайт
+			+icon('up-right-arrow')
+		

@@ -1,19 +1,22 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
-
+	padding-top: 53.5px;
+	@include media-breakpoint-up(lg) {
+		padding-top: 0;
+		background-image: url('../img/header-bg.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 93%;
+	}
 	h1 {
-		margin-bottom: 1px;
+		margin-bottom: rem(29);
 	}
-
-	h2 {
-		margin-bottom: 1px;
+	p {
+		color: #ACAAC2;
+		font-size: rem(16);
+		margin-bottom: rem(40);
+		line-height: 1.50em;
 	}
-
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

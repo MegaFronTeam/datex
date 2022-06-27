@@ -384,6 +384,54 @@ function eventHandler() {
 	});
 	// modal window
 
+	var bool = true;
+	$('#fullpage').fullpage({
+		scrollingSpeed: 800,
+		loopHorizontal: true,
+		responsiveWidth: 992, 
+		// responsiveHeight: 600,
+		// responsiveHeight: 600,
+		// responsiveHeight: 1200,
+		animateAnchor: true,
+		navigation: false,
+		// navigationPosition: 'right',
+		recordHistory: false,
+		css3:true,
+		scrollBar: false,
+		// verticalCentered: false,
+		afterResponsive: function(){
+		},
+		fixedElements: ['.top-nav', '.footer'],
+		anchors: ['headerBlock', 'sForm', 'sContact'],
+		// menu: '.menu'	,
+		// scrollBar: true,
+		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+		// afterLoad: function(origin, destination, direction){
+		// 	var loadedSection = destination.item;
+		// 	// console.log(this);
+		// 	if(loadedSection.classList.contains('section--dark') ) {
+		// 		document.querySelector('body').classList.add('body-dark')  
+		// 	} else{
+		// 		document.querySelector('body').classList.remove('body-dark') 
+				 
+		// 	}
+			
+		// },
+		// continuousVertical: true,
+		// autoScrolling: true,
+		// scrollOverflow: true,
+		// scrollOverflowReset: true,
+		// scrollOverflowReset: true,
+		// afterRender: function () {
+		// 	wow.init();
+		// 	// var rellax = new Rellax('.rellax', {});
+		// 	// wow.init();
+	
+		
+
+		// },
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
