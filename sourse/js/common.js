@@ -401,21 +401,21 @@ function eventHandler() {
 			scrollBar: false,
 			verticalCentered: true,
 			fixedElements: ['.top-nav', '.footer'],
-			anchors: ['header', 'sImportantBlock', 'sAboutWorkBlock', 'sActualVacanciesBlock', 'sDirectionsBloxk' ,'sContactBlock'],
+			anchors: ['header', 'sImportantBlock', 'sAboutWorkBlock', 'sActualVacanciesBlock', 'sDirectionsBlock' ,'sContactBlock'],
 			// menu: '.menu'	,
 			// scrollBar: true,
 			parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-			// afterLoad: function(origin, destination, direction){
-			// 	var loadedSection = destination.item;
-			// 	// console.log(this);
-			// 	if(loadedSection.classList.contains('section--dark') ) {
-			// 		document.querySelector('body').classList.add('body-dark')  
-			// 	} else{
-			// 		document.querySelector('body').classList.remove('body-dark') 
+			onLeave: function(origin, destination, direction){
+				var loadedSection = destination.item;
+				console.log(loadedSection);
+				if(loadedSection.classList.contains('item-last') ) {
+					document.querySelector('footer').classList.add('last-slide')  
+				} else{
+					document.querySelector('footer').classList.remove('last-slide') 
 					 
-			// 	}
+				}
 				
-			// },
+			},
 			// continuousVertical: true,
 			// autoScrolling: true,
 			scrollOverflow: false,

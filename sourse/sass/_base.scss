@@ -570,7 +570,7 @@ h6 {
 	.footer {
 		position: absolute;
 		left: 0;
-		bottom: rem(60);
+		bottom: rem(25);
 		width: 100%;
 		z-index: 2;
 		align-items: center;
@@ -579,15 +579,23 @@ h6 {
 		@include media-breakpoint-up(lg) {
 			position: fixed;
 		}
+		@include media-breakpoint-up(xxl) {
+			bottom: rem(60);
+			position: fixed;
+		}
 		@include media-breakpoint-up(md) {
 			flex-direction: row;
 			justify-content: space-between;
 		}
 		&__policy-block {
+			display: flex;
 			align-items: center;
 			text-align: center;
 			width: auto;
 			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
 			@include media-breakpoint-up(md) {
 				margin-bottom: 0;
 			}
@@ -601,6 +609,49 @@ h6 {
 			color: #ACAAC2 !important;
 			&:hover {
 				color: #fff !important;
+			}
+		}
+		&__scroll-down {
+			display: none;
+			cursor: pointer;
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.icon {
+				flex: 0 0 auto;
+				margin-bottom: rem(20);
+				color: #fff;
+				font-size: rem(30);
+			}
+			p {
+				@include mt;
+				font-family: 'Proxima Nova';
+				font-size: rem(14);
+				text-transform: uppercase;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				margin-bottom: 0;
+				color: #ACAAC2;
+			}
+			&:hover {
+				p {
+					color: #fff;
+				}
+			}
+		}
+		&.last-slide {
+			.footer__scroll-down {
+				display: none;
+			}
+			.footer__policy-block {
+				display: flex;
 			}
 		}
 	}
