@@ -436,8 +436,8 @@ function eventHandler() {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.sAboutWork .swiper-button-next',
+			prevEl: '.sAboutWork .swiper-button-prev',
 		},
 		breakpoints: {
 			// when window width is >= 480px
@@ -461,8 +461,8 @@ function eventHandler() {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.sDirections .swiper-button-next',
+			prevEl: '.sDirections .swiper-button-prev',
 		},
 		breakpoints: {
 			// when window width is >= 480px
