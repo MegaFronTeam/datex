@@ -29,7 +29,7 @@
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(lg) {
 			position: relative;
-			margin-bottom: rem(40);
+			margin-bottom: rem(8);
 			&:before {
 				content: '';
 				display: block;
@@ -42,10 +42,16 @@
 				transform: translateY(-50%);
 			}
 		}
+		@include media-breakpoint-up(xxl) {
+			margin-bottom: rem(40);
+		}
 	}
 	.section-title{
 		margin-bottom: rem(40);
 		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(10);
+		}
+		@include media-breakpoint-up(xxl) {
 			margin-bottom: rem(60);
 		}
 	}
@@ -67,6 +73,12 @@
 			left: 0;
 			top: 0;
 		}
+		@include media-breakpoint-up(lg) {
+			padding: rem(20);
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: rem(40);
+		}
 		&:nth-child(odd) {
 			@include media-breakpoint-up(lg) {
 				border-right: 1px solid rgba($color: #fff, $alpha: .1);
@@ -76,9 +88,6 @@
 			@include media-breakpoint-down(lg) {
 				border-bottom: 1px solid rgba($color: #fff, $alpha: .1);
 			}
-		}
-		@include media-breakpoint-up(lg) {
-			padding: rem(40);
 		}
 		&:hover {
 			&::before {

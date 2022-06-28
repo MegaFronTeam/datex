@@ -10,7 +10,7 @@ mixin sDirections(data)
 					.col-xl-4.col-lg-6
 						+b.direction-item(href="#")
 							+e.content
-								h3!=title
+								.h3!=title
 								+e.job!=job
 								+e.btn
 									+e.btn-icon
@@ -38,17 +38,18 @@ mixin sDirections2(data)
 			+e.slider--js.swiper
 				.swiper-wrapper
 					mixin item(title,job,pic)
-						+b.direction-item(href="#").swiper-slide
-							+e.content
-								h3!=title
-								+e.job!=job
-								+e.btn
-									+e.btn-icon
-										+icon('arrow-right')
-									+e.btn-icon--mob
-										+icon('arrow-right-mob')
-							+e.bg-pic
-								img(src=`img/direction-item-bg-${pic}.png`, alt="")
+						+b.direction-item.swiper-slide
+							+e.link(href="#")
+								+e.content
+									.h3!=title
+									+e.job!=job
+									+e.btn
+										+e.btn-icon
+											+icon('arrow-right')
+										+e.btn-icon--mob
+											+icon('arrow-right-mob')
+								+e.bg-pic
+									img(src=`img/direction-item-bg-${pic}.png`, alt="")
 					+item(`Информационные технологии`,`4 вакансии`,`7`)
 					+item(`Развитие бизнеса и продажи`,`15 вакансий`,`8`)
 					+item(`руководители`,`2 вакансии`,`9`)

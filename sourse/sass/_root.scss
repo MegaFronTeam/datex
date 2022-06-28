@@ -2,7 +2,7 @@
 :root {
 	--animate-delay: 1.2s;
 	
-	--bs-body-font-size: calc(11px + .05vw + .05vh);
+	--bs-body-font-size: calc(14px + .05vw + .05vh);
 	@include media-breakpoint-up(xxl) {
 
 		--bs-body-font-size: #{$em-base};

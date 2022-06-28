@@ -660,6 +660,9 @@ h6 {
 			justify-content: flex-start;
 			margin-bottom: rem(40);
 			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(12);
+			}
+			@include media-breakpoint-up(xxl) {
 				margin-bottom: rem(58);
 			}
 		}

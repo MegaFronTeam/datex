@@ -8,13 +8,14 @@ mixin sActualVacancies(data)
 				h2 актуальные вакансии
 			+e.row.row
 				mixin item(img, date, title, price)
-					+e.col(href="#").col-lg-6
-						img(src=`img/${img}.png`)
-						+e.date!= date
-						h4!= title
-						+e.price
-							p!= price
-							+icon('arrow-right')
+					+e.col.col-lg-6
+						+e.link(href="#")
+							img(src=`img/${img}.png`)
+							+e.date!= date
+							h4!= title
+							+e.price
+								p!= price
+								+icon('arrow-right')
 				+item('fire', '23 мая 2021', 'Менеджер по продажам 1С (В2В)', 'от 50 000 ₽')
 				+item('handshake', '21 мая 2021', 'Менеджер по сопровождению клиентов', 'от 50 000 ₽')
 				+item('glasses-man', '19 мая 2021', 'Программист 1С/Junior', 'от 40 000 ₽')

@@ -8,22 +8,26 @@ mixin sAboutWork(data)
 				h2 узнайте о работе в датекс
 			+e.slider--js.swiper
 				.swiper-wrapper
-					+e.slide(href="#").swiper-slide
-						+e.img-wrap
-							+img('img/sAboutWork-img-1.jpg')
-						h3 вакансии
-					+e.slide(href="#").swiper-slide
-						+e.img-wrap
-							+img('img/sAboutWork-img-2.jpg')
-						h3 Направления
-					+e.slide(href="#").swiper-slide
-						+e.img-wrap
-							+img('img/sAboutWork-img-1.jpg')
-						h3 Жизнь в компании
-					+e.slide(href="#").swiper-slide
-						+e.img-wrap
-							+img('img/sAboutWork-img-3.jpg')
-						h3 Стажировка для студентов
+					+e.slide.swiper-slide
+						+e.link(href="#")
+							+e.img-wrap
+								+img('img/sAboutWork-img-1.jpg')
+							.h3 вакансии
+					+e.slide.swiper-slide
+						+e.link(href="#")
+							+e.img-wrap
+								+img('img/sAboutWork-img-2.jpg')
+							.h3 Направления
+					+e.slide.swiper-slide
+						+e.link(href="#")
+							+e.img-wrap
+								+img('img/sAboutWork-img-1.jpg')
+							.h3 Жизнь в компании
+					+e.slide.swiper-slide
+						+e.link(href="#")
+							+e.img-wrap
+								+img('img/sAboutWork-img-3.jpg')
+							.h3 Стажировка для студентов
 			+e.wrap 
 				.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
 					+icon('chevron-left')
