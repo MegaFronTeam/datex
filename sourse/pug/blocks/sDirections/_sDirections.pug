@@ -28,3 +28,37 @@ mixin sDirections(data)
 				+item(`Стажировка`,`4 вакансии`,`5`)
 				+item(`Управление процессами в офисе`,`4 вакансии`,`6`)
 	// end sDirections
+
+mixin sDirections2(data)
+	// start sDirections
+	+b.sDirections.section#sDirections&attributes(attributes)
+		.container
+			+b.section-title
+				h2 направления
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin item(title,job,pic)
+						+b.direction-item(href="#").swiper-slide
+							+e.content
+								h3!=title
+								+e.job!=job
+								+e.btn
+									+e.btn-icon
+										+icon('arrow-right')
+									+e.btn-icon--mob
+										+icon('arrow-right-mob')
+							+e.bg-pic
+								img(src=`img/direction-item-bg-${pic}.png`, alt="")
+					+item(`Информационные технологии`,`4 вакансии`,`7`)
+					+item(`Развитие бизнеса и продажи`,`15 вакансий`,`8`)
+					+item(`руководители`,`2 вакансии`,`9`)
+					+item(`управление проектами`,`4 вакансии`,`10`)
+					+item(`Стажировка`,`4 вакансии`,`11`)
+					+item(`Управление процессами в офисе`,`4 вакансии`,`12`)
+				+e.wrap 
+					.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+						+icon('chevron-left')
+					+e.circle
+					.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+						+icon('chevron-right')
+	// end sDirections

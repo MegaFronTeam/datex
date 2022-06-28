@@ -2,6 +2,8 @@ extends ../layout/main.pug
 
 include ../blocks/sImportant/_sImportant.pug
 include ../blocks/sAboutWork/_sAboutWork.pug
+include ../blocks/sActualVacancies/_sActualVacancies.pug
+include ../blocks/sDirections/_sDirections.pug
 
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
@@ -29,6 +31,8 @@ block pagecontent
 		+headerBlock().bg-dark
 		+sImportant().bg-darkest
 		+sAboutWork().bg-dark
+		+sActualVacancies().bg-darkest
+		+sDirections2().bg-dark
 		+sContact.bg-darkest
 		+footer2()
 				

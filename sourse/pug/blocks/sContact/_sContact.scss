@@ -4,6 +4,7 @@
 	position: relative;
 	padding-bottom: rem(280);
 	padding-top: rem(60);
+	overflow: hidden;
 	@include media-breakpoint-up(md) {
 		padding-bottom: rem(90);
 	}
@@ -11,15 +12,15 @@
 		position: relative;
 		img {
 			display: none;
+			width: 100%;
+			max-width: 1920px;
 			@include media-breakpoint-up(lg) {
 				display: block;
-				width: 100%;
-				max-width: 1920px;
 				width: auto;
 				position: absolute;
 				left: 50%;
 				transform: translateX(-50%);
-				bottom: calc(((100vh - 100%) / -2));
+				bottom: calc(((100vh - 100%) / -2) - rem(10));
 			}
 		}
 	}

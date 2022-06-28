@@ -24,7 +24,7 @@
 			}
 			img {
 				width: 100%;
-				max-width: 320px;
+				max-width: rem(320);
 				@include media-breakpoint-up(lg) {
 					width: auto;
 					max-width: none;

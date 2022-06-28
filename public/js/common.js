@@ -383,52 +383,54 @@ function eventHandler() {
 
 	});
 	// modal window
+	let check = $('.fullpage');
+	if(check.length > 0) {
 
-	var bool = true;
-	$('#fullpage').fullpage({
-		scrollingSpeed: 800,
-		loopHorizontal: true,
-		responsiveWidth: 992, 
-		// responsiveHeight: 600,
-		// responsiveHeight: 600,
-		// responsiveHeight: 1200,
-		animateAnchor: true,
-		navigation: false,
-		// navigationPosition: 'right',
-		recordHistory: false,
-		css3:true,
-		scrollBar: false,
-		verticalCentered: true,
-		fixedElements: ['.top-nav', '.footer'],
-		anchors: ['header', 'sImportantBlock', 'sAboutWorkBlock' ,'sContactBlock'],
-		// menu: '.menu'	,
-		// scrollBar: true,
-		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-		// afterLoad: function(origin, destination, direction){
-		// 	var loadedSection = destination.item;
-		// 	// console.log(this);
-		// 	if(loadedSection.classList.contains('section--dark') ) {
-		// 		document.querySelector('body').classList.add('body-dark')  
-		// 	} else{
-		// 		document.querySelector('body').classList.remove('body-dark') 
-				 
-		// 	}
-			
-		// },
-		// continuousVertical: true,
-		// autoScrolling: true,
-		scrollOverflow: false,
-		// scrollOverflowReset: true,
-		// scrollOverflowReset: true,
-		// afterRender: function () {
-		// 	wow.init();
-		// 	// var rellax = new Rellax('.rellax', {});
-		// 	// wow.init();
-	
+		$('#fullpage').fullpage({
+			scrollingSpeed: 800,
+			loopHorizontal: true,
+			responsiveWidth: 992, 
+			// responsiveHeight: 600,
+			// responsiveHeight: 600,
+			// responsiveHeight: 1200,
+			animateAnchor: true,
+			navigation: false,
+			// navigationPosition: 'right',
+			recordHistory: false,
+			css3:true,
+			scrollBar: false,
+			verticalCentered: true,
+			fixedElements: ['.top-nav', '.footer'],
+			anchors: ['header', 'sImportantBlock', 'sAboutWorkBlock', 'sActualVacanciesBlock', 'sDirectionsBloxk' ,'sContactBlock'],
+			// menu: '.menu'	,
+			// scrollBar: true,
+			parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+			// afterLoad: function(origin, destination, direction){
+			// 	var loadedSection = destination.item;
+			// 	// console.log(this);
+			// 	if(loadedSection.classList.contains('section--dark') ) {
+			// 		document.querySelector('body').classList.add('body-dark')  
+			// 	} else{
+			// 		document.querySelector('body').classList.remove('body-dark') 
+					 
+			// 	}
+				
+			// },
+			// continuousVertical: true,
+			// autoScrolling: true,
+			scrollOverflow: false,
+			// scrollOverflowReset: true,
+			// scrollOverflowReset: true,
+			// afterRender: function () {
+			// 	wow.init();
+			// 	// var rellax = new Rellax('.rellax', {});
+			// 	// wow.init();
 		
-
-		// },
-	});
+			
+	
+			// },
+		});
+	}
 
 	const sAboutWorkswiper = new Swiper('.sAboutWork__slider--js', {
 		slidesPerView: 1,
@@ -450,6 +452,31 @@ function eventHandler() {
 			// when window width is >= 640px
 			992: {
 				slidesPerView: 4,
+				spaceBetween: 20,
+			}
+		}
+	});
+	
+	const sDirectionsSwiper = new Swiper('.sDirections__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 480px
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			// when window width is >= 640px
+			992: {
+				slidesPerView: 3,
 				spaceBetween: 20,
 			}
 		}

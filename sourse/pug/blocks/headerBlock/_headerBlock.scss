@@ -25,16 +25,19 @@
 		position: relative;
 		z-index: 1;
 		width: 100%;
-		max-width: 846px;
+		max-width: rem(846);
 		@include media-breakpoint-up(lg) {
 			width: auto;
 			position: absolute;
 			right: -184px;
 			bottom: calc(((100vh - 100%) / -2));
 			// bottom: calc(((100vh - 100%) / -2) - 60px);
+			max-width: 74%;
 		}
 		@include media-breakpoint-up(xl){
 			right: -104px;
+			max-width: 74%;
+			max-width: rem(846);
 		}
 	}
 	&__btn {

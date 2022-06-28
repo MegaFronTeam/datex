@@ -174,9 +174,21 @@
 										</label>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="add-file">
-										<label><span class="add-file__text">резюме:</span><input class="add-file__input" name="file" type="file"/><span class="add-file__btn"> </span>
-										</label><span class="add-file__filename"> </span>
+									<div class="upload-field">
+										<div class="upload-field__title form-wrap__input-title">резюме:
+										</div>
+										<div class="upload-field__wrap">
+											<div class="upload-field__input-wrap">
+												<input class="input-upload" id="input-upload" type="file" name="file"/>
+												<label class="upload-field__btn btn btn-outline-primary" for="input-upload">
+													<svg class="icon icon-clip ">
+														<use xlink:href="img/svg/sprite.svg#clip"></use>
+													</svg><span>прикрепить</span>
+												</label>
+											</div>
+											<div class="upload-field__file-name">Название файла.pdf
+											</div>
+										</div>
 									</div>
 									<div class="form-wrap__policy">
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text">Согласен(-а) на обработку персональных данных в соответствии с <a href="#">условиями.</a></small>

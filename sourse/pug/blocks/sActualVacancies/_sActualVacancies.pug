@@ -1,0 +1,23 @@
+mixin sActualVacancies(data)
+	// start sActualVacancies
+	+b.SECTION.sActualVacancies.section#sActualVacancies&attributes(attributes)
+		+e.container.container
+			img(src="img/sActualVacancies-bg-1.png", alt="").phone
+			img(src="img/sActualVacancies-bg-2.png", alt="").coffee
+			+b.section-title.text-center
+				h2 актуальные вакансии
+			+e.row.row
+				mixin item(img, date, title, price)
+					+e.col(href="#").col-lg-6
+						img(src=`img/${img}.png`)
+						+e.date!= date
+						h4!= title
+						+e.price
+							p!= price
+							+icon('arrow-right')
+				+item('fire', '23 мая 2021', 'Менеджер по продажам 1С (В2В)', 'от 50 000 ₽')
+				+item('handshake', '21 мая 2021', 'Менеджер по сопровождению клиентов', 'от 50 000 ₽')
+				+item('glasses-man', '19 мая 2021', 'Программист 1С/Junior', 'от 40 000 ₽')
+				+item('briefcase', '15 мая 2021', 'HR менеджер', 'На собедесовании')
+			+e.btn(href="#").btn.btn-outline-white все вакансии
+	// end sActualVacancies

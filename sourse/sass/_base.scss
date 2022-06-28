@@ -604,6 +604,37 @@ h6 {
 			}
 		}
 	}
+	.sDirections {
+		.section-title {
+			justify-content: flex-start;
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(58);
+			}
+		}
+		&__slider {
+			@include media-breakpoint-up(lg) {
+				overflow: visible;
+			}
+		}
+		&__btn-icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.direction-item {
+		@include mt;
+		--title-color: #fff;
+		background-color: $body-color;
+		height: auto;
+		&:hover {
+			--bg-op: 1;
+		}
+		&__content {
+			height: 100%;
+		}
+	}
 }
 .bg-dark {
 	background-color: #2A3148;

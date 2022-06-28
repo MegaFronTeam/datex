@@ -87,7 +87,7 @@
 				transform: translateX(-50%) skewX(341deg);
 				top: -9px;
 				height: calc(100% + 18px);
-				width: 13px;
+				width: rem(13);
 				background-color: transparent;
 				z-index: -1;
 			}
@@ -115,7 +115,7 @@
 		--swiperArrowSize: auto;
 		--swiperColorDef: #fff;
 		.icon {
-			font-size: 20px;
+			font-size: rem(20);
 		}
 	}
 	&__wrap  {

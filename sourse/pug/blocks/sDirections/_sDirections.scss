@@ -36,7 +36,44 @@
 		}
 		--bs-gutter-x: #{rem(10)};
 	}
-
+	.swiper-button-hand {
+		position: sticky;
+		display: inline-flex;
+		border: none;
+		--swiperBgDef: transparent;
+		--swiperBgDefHover: transparent;
+		--swiperArrowSize: auto;
+		--swiperColorDef: #fff;
+		.icon {
+			font-size: rem(20);
+		}
+	}
+	&__wrap  {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: rem(20);
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+	&__circle {
+		position: relative;
+		display: inline-block;
+		border: 2px solid #555A6D;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		margin: 0 5px;
+		&::before {
+			content: '';
+			@include a-cent;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $primary;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
