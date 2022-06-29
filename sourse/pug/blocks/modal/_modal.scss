@@ -98,6 +98,10 @@
 	.form-wrap__policy {
 		margin-top: rem(30);
 	}
+	.upload-field__btn{
+		width: auto;
+		display: inline-block;
+	}
 	&__title {
 		font-size: rem(30);
 		padding-bottom: rem(20);
