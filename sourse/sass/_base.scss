@@ -295,7 +295,8 @@ ul {
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
 	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	// border: 2px solid var(--swiperBorderColorDef);
+	border: none;
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
@@ -307,7 +308,8 @@ ul {
 	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
-
+	--swiperColorDefHover:#{$white};
+	--swiperBgDefHover:#{$primary};
 	&:hover {
 		background-color: var(--swiperBgDefHover);
 		border-color: var(--swiperBorderColorDefHover);
@@ -785,3 +787,8 @@ h6 {
 h3{
 	text-transform: uppercase;
 }
+// .fancybox__content iframe{
+// 	width: 1280px !important;
+// 	height: 720px !important;
+// 	max-width: 100%;
+// }

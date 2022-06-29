@@ -7,7 +7,9 @@ mixin sAbout(data)
 				.swiper-wrapper
 					mixin slide(pic)
 						+e.slide.swiper-slide
-							+pic(`about-slide-${pic}.jpg`,``,0)
+							//- +pic(`about-slide-${pic}.jpg`,``,0)
+							+e.picture(data-fancybox data-src=`img/@2x/about-slide-${pic}.jpg`)
+								img(src=`img/@2x/about-slide-${pic}.jpg`, alt="")
 					+slide(1)
 					+slide(2)
 					+slide(3)

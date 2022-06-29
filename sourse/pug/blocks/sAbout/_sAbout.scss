@@ -29,6 +29,7 @@
 			padding-right: rem(20);
 			text-align: center;
 		}
+		margin-bottom: rem(60);
 		@include media-breakpoint-down(sm){
 			width: calc(100vw - var(--bs-gutter-x));
 			border-radius: 0;
@@ -39,6 +40,7 @@
 		padding-bottom: rem(28);
 	}
 	&__slide{
+		border-radius: 4px;
 		picture{
 			@include media-breakpoint-up(lg){
 				@include block(420,284);
@@ -52,6 +54,21 @@
 				height: 100%;
 				object-fit: cover;
 			}
+		}
+	}
+	&__picture{
+		@include media-breakpoint-up(lg){
+			@include block(420,284);
+		}
+		cursor: pointer;
+		@include block(280,188);
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 	.swiper-pagination{
