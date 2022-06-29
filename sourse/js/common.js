@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -23,8 +23,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -79,7 +79,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -153,7 +153,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	ifie() {
@@ -297,7 +297,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -329,7 +329,16 @@ function eventHandler() {
 
 	whenResize();
 
-
+	function inputFile(){
+		if (document.querySelector('.upload-field')){
+			let uploadField = document.querySelectorAll('.upload-field');
+			for (let i=0;i<uploadField.length;i++){
+				let inputFile = uploadField[i].querySelector('.input-upload');
+				inputFile.addEventListener('change',() => uploadField[i].querySelector('.upload-field__file-name').innerHTML = inputFile.files[0].name);
+			}
+		}
+	}
+	inputFile();
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
@@ -355,12 +364,12 @@ function eventHandler() {
 	const aboutSlider = new Swiper('.sAbout__slider--js', {
 		spaceBetween: 0,
 		slidesPerView: '1',
-		breakpoints:{
-			992:{
+		breakpoints: {
+			992: {
 				slidesPerView: '3',
 				spaceBetween: 20,
 			},
-			768:{
+			768: {
 				slidesPerView: '2',
 				spaceBetween: 10,
 			}
@@ -388,12 +397,12 @@ function eventHandler() {
 	});
 	// modal window
 	let check = $('.fullpage');
-	if(check.length > 0) {
+	if (check.length > 0) {
 
 		$('#fullpage').fullpage({
 			scrollingSpeed: 800,
 			loopHorizontal: true,
-			responsiveWidth: 992, 
+			responsiveWidth: 992,
 			// responsiveHeight: 600,
 			// responsiveHeight: 600,
 			// responsiveHeight: 1200,
@@ -401,24 +410,24 @@ function eventHandler() {
 			navigation: false,
 			// navigationPosition: 'right',
 			recordHistory: false,
-			css3:true,
+			css3: true,
 			scrollBar: false,
 			verticalCentered: true,
 			fixedElements: ['.top-nav', '.footer'],
-			anchors: ['header', 'sImportantBlock', 'sAboutWorkBlock', 'sActualVacanciesBlock', 'sDirectionsBlock' ,'sContactBlock'],
+			anchors: ['header', 'sImportantBlock', 'sAboutWorkBlock', 'sActualVacanciesBlock', 'sDirectionsBlock', 'sContactBlock'],
 			// menu: '.menu'	,
 			// scrollBar: true,
-			parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-			onLeave: function(origin, destination, direction){
+			parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
+			onLeave: function (origin, destination, direction) {
 				var loadedSection = destination.item;
 				console.log(loadedSection);
-				if(loadedSection.classList.contains('item-last') ) {
-					document.querySelector('footer').classList.add('last-slide')  
-				} else{
-					document.querySelector('footer').classList.remove('last-slide') 
-					 
+				if (loadedSection.classList.contains('item-last')) {
+					document.querySelector('footer').classList.add('last-slide')
+				} else {
+					document.querySelector('footer').classList.remove('last-slide')
+
 				}
-				
+
 			},
 			// continuousVertical: true,
 			// autoScrolling: true,
@@ -429,12 +438,12 @@ function eventHandler() {
 			// 	wow.init();
 			// 	// var rellax = new Rellax('.rellax', {});
 			// 	// wow.init();
-		
-			
-	
+
+
+
 			// },
 		});
-		$(document).on('click', '.footer__scroll-down', function(){
+		$(document).on('click', '.footer__scroll-down', function () {
 			fullpage_api.moveSectionDown();
 		});
 	}
@@ -463,7 +472,7 @@ function eventHandler() {
 			}
 		}
 	});
-	
+
 	const sDirectionsSwiper = new Swiper('.sDirections__slider--js', {
 		slidesPerView: 1,
 		spaceBetween: 0,
