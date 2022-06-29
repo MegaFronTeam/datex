@@ -20,7 +20,7 @@
 		background-color: #ffffff;
 		border-radius: 4px;
 		@include media-breakpoint-up(lg){
-			padding: rem(60);
+			padding: rem(56.800);
 		}
 		@include media-breakpoint-down(lg){
 			padding-top: rem(40);
@@ -29,7 +29,7 @@
 			padding-right: rem(20);
 			text-align: center;
 		}
-		margin-bottom: rem(60);
+		margin-bottom: rem(10.400);
 		@include media-breakpoint-down(sm){
 			width: calc(100vw - var(--bs-gutter-x));
 			border-radius: 0;

@@ -16,7 +16,7 @@
 		justify-content: center;
 		row-gap: rem(15);
 		padding-bottom: rem(29);
-		margin-bottom: rem(59);
+		margin-bottom: rem(55.800);
 		position: relative;
 		&:before {
 			content: '';
@@ -87,7 +87,8 @@
 			}
 		}
 		p {
-			margin-bottom: rem(30);
+			margin-bottom: rem(21.400);
+			line-height: 1.25em;
 			span {
 				font-weight: 700;
 				color: $primary;
@@ -95,12 +96,12 @@
 		}
 		ul {
 			list-style-type: none;
-			margin-bottom: rem(30);
+			margin-bottom: rem(27.800);
 			li {
 				padding-left: rem(15);
 				position: relative;
 				&:not(:last-child) {
-					margin-bottom: rem(15);
+					margin-bottom: rem(12);
 				}
 				&::before {
 					content: '';
@@ -127,7 +128,7 @@
 		background-color: #FFFFFF;
 		border-radius: 4px;
 		width: calc(100vw - var(--bs-gutter-x));
-		padding: rem(30) rem(20);
+		padding: rem(74.400) rem(58.400);
 		margin-left: calc(((100vw - 100%) * -0.5) + var(--bs-gutter-x) / 2);
 		@include media-breakpoint-up(md) {
 			margin-left: 0;
@@ -148,7 +149,7 @@
 				width: rem(60);
 				height: 2px;
 				background-color: $primary;
-				bottom: 0;
+				bottom: -6px;
 				left: 50%;
 				transform: translateX(-50%);
 			}
@@ -157,7 +158,7 @@
 			}
 		}
 		.upload-field {
-			margin-bottom: rem(30);
+			margin-bottom: rem(15.600);
 		}
 	}
 	@include media-breakpoint-up(xl) {}
