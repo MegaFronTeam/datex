@@ -19,6 +19,7 @@
 			bottom: calc(var(--sPB) * -1);
 			text-align: center;
 			z-index: 1;
+			pointer-events: none;
 			@include media-breakpoint-up(lg) {
 				bottom: calc(((100vh - 100%) / -2) - 60px);
 				width: auto;
@@ -26,6 +27,7 @@
 			img {
 				width: auto;
 				max-width: 320px;
+				pointer-events: none;
 				@include media-breakpoint-up(lg) {
 					max-width: none;
 				}

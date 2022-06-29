@@ -14,13 +14,14 @@
 			display: none;
 			width: 100%;
 			max-width: 1920px;
+			pointer-events: none;
 			@include media-breakpoint-up(lg) {
 				display: block;
 				width: auto;
 				position: absolute;
 				left: 50%;
 				transform: translateX(-50%);
-				bottom: calc(((100vh - 100%) / -2) - rem(10));
+				bottom: calc(((100vh - 100%) / -2) - rem(16));
 			}
 		}
 	}
