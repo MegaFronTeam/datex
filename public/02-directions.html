@@ -15,7 +15,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 	</head>
-	<body>
+	<body class="directions-page">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -87,14 +87,16 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
+			<div class="container">
+				<div class="section-title">
+					<h1>Ждем тебя в команде</h1>
+					<div class="section-title__subtitle">Выберите интересующее вас направление и изучите вакансии
+					</div>
+				</div>
+			</div>
 			<!-- start sDirections-->
 			<div class="sDirections section" id="sDirections">
 				<div class="container">
-					<div class="section-title">
-						<h1>Ждем тебя в команде</h1>
-					</div>
-					<div class="sDirections__subtitle">Выберите интересующее вас направление и изучите вакансии
-					</div>
 					<div class="row">
 								<div class="col-xl-4 col-lg-6">
 									<a class="direction-item" href="#">
@@ -117,7 +119,7 @@
 										</div>
 										<div class="direction-item__bg-pic"><img src="img/direction-item-bg-1.png" alt=""/>
 										</div>
-										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-3-hover.png" alt=""/>
+										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-1-hover.png" alt=""/>
 										</div>
 									</a>
 								</div>
@@ -142,7 +144,7 @@
 										</div>
 										<div class="direction-item__bg-pic"><img src="img/direction-item-bg-2.png" alt=""/>
 										</div>
-										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-3-hover.png" alt=""/>
+										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-2-hover.png" alt=""/>
 										</div>
 									</a>
 								</div>
@@ -192,7 +194,7 @@
 										</div>
 										<div class="direction-item__bg-pic"><img src="img/direction-item-bg-4.png" alt=""/>
 										</div>
-										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-3-hover.png" alt=""/>
+										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-4-hover.png" alt=""/>
 										</div>
 									</a>
 								</div>
@@ -217,14 +219,14 @@
 										</div>
 										<div class="direction-item__bg-pic"><img src="img/direction-item-bg-5.png" alt=""/>
 										</div>
-										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-3-hover.png" alt=""/>
+										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-5-hover.png" alt=""/>
 										</div>
 									</a>
 								</div>
 								<div class="col-xl-4 col-lg-6">
 									<a class="direction-item" href="#">
 										<div class="direction-item__content">
-											<div class="h3">Управление процессами в офисе</div>
+											<div class="h3">Управление процессами в&nbsp;офисе</div>
 											<div class="direction-item__job">4 вакансии
 											</div>
 											<div class="direction-item__btn">
@@ -242,7 +244,7 @@
 										</div>
 										<div class="direction-item__bg-pic"><img src="img/direction-item-bg-6.png" alt=""/>
 										</div>
-										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-3-hover.png" alt=""/>
+										<div class="direction-item__bg-pic direction-item__bg-pic--hover"><img src="img/direction-item-bg-6-hover.png" alt=""/>
 										</div>
 									</a>
 								</div>
@@ -258,7 +260,9 @@
 					</div>
 					<div class="sRequest__caption">Свяжитесь с нами и мы предложим вакансию для вас
 					</div>
-					<div class="sRequest__btn-wrap"><a class="btn btn-primary" href="#">оставить заявку</a>
+					<div class="sRequest__btn-wrap">
+						<a class="sRequest__btn btn btn-primary" href="#">оставить заявку
+						</a>
 					</div>
 				</div>
 			</section>
@@ -403,7 +407,6 @@
 							<label>
 								<div class="textarea-block">
 									<textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите"></textarea><span class="form-wrap__input-title">комментарий:</span>
-									<div class="textarea-line"></div>
 								</div>
 							</label>
 						</div>

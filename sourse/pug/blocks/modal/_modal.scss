@@ -40,17 +40,17 @@
 	}
 	textarea {
 		// background-image: url("../img/svg/bgtextarea.svg");
-		background-image: repeating-linear-gradient(
-			0deg,
-			var(--line-color) 0,
-			var(--line-color) var(--border-height),
-			transparent var(--border-height),
-			transparent calc(var(--border-height) + var(--input-size))
-		);
-		--line-color: #dedede;
+		// background-image: repeating-linear-gradient(
+		// 	0deg,
+		// 	var(--line-color) 0,
+		// 	var(--line-color) var(--border-height),
+		// 	transparent var(--border-height),
+		// 	transparent calc(var(--border-height) + var(--input-size))
+		// );
+		// --line-color: #dedede;
 		// --line-color: transparent;
-		--border-height: 2px;
-		--input-size: #{rem(18)};
+		// --border-height: 2px;
+		// --input-size: #{rem(18)};
 		padding-top: 0;
 		padding-bottom: 0;
 		height: rem(80);

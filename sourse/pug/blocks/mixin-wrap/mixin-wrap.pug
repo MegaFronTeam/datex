@@ -35,7 +35,7 @@ mixin page-head(title,subtitle,pic)
 	+b.page-head
 		.container
 			.row.align-items-center
-				.col-lg-6
+				+e.col.col-lg-6
 					h1!=title
 					+e.subtitle!=subtitle
 				.col-lg-6
@@ -46,7 +46,7 @@ mixin page-head2(title,subtitle,pic,back)
 	+b.page-head
 		.container
 			.row.align-items-center
-				.col-lg-6
+				+e.col.col-lg-6
 					+e.back(href="#")
 						+icon('chevron-left')
 						span!=back
@@ -60,7 +60,7 @@ mixin page-head3(title, back)
 	+b.page-head--vacancies
 		.container
 			.row.align-items-center
-				.col-lg-9
+				+e.col.col-lg-9
 					+e.back(href="#")
 						+icon('chevron-left')
 						span!=back

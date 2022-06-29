@@ -37,7 +37,7 @@
 			}
 			@include media-breakpoint-up(xxl) {
 				height: rem(24);
-				width: rem(146);
+				width: rem(162);
 			}
 			height: rem(20);
 			width: rem(113.33);
@@ -53,7 +53,7 @@
 	}
 	&__tel {
 		@include media-breakpoint-up(xxl) {
-			width: rem(146);
+			width: rem(162);
 		}
 		@include media-breakpoint-up(lg) {
 			width: rem(108);

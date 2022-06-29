@@ -37,6 +37,10 @@
 		margin-right: auto;
 	}
 	&__btn{
+		@include media-breakpoint-up(lg){
+			width: rem(225);
+		}
+		width: rem(180);
 	}
 	&__btn-wrap{
 		display: flex;

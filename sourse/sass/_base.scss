@@ -724,3 +724,39 @@ h6 {
 		height: 100%;
 	}
 }
+
+.directions-page{
+	h1{
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(20);
+		text-align: center;
+	}
+	.section-title {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		@include media-breakpoint-up(lg){
+			padding-top: rem(100);
+		}
+		padding-top: rem(30);
+	}
+	.section-title__subtitle{
+		@include media-breakpoint-up(lg) {
+		}
+		margin-bottom: 0;
+		line-height: 150%;
+		text-align: center;
+	}
+	--sTPB: #{rem(20)};
+	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(50)};
+	}
+	.sDirections{
+		@include media-breakpoint-up(lg){
+			--sPT:#{rem(50)};
+		}
+		--sPT:#{rem(20)};
+	}
+}

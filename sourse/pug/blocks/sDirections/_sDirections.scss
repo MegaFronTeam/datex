@@ -22,12 +22,7 @@
 		margin-bottom: 0;
 	}
 	&__subtitle {
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(100);
-		}
-		margin-bottom: rem(20);
-		line-height: 150%;
-		text-align: center;
+		
 	}
 	.row {
 		--bs-gutter-y: var(--bs-gutter-x);

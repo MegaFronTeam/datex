@@ -12,7 +12,7 @@ include ../blocks/sDirections/_sDirections.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'directions-page'
 	- let  bg= null
 
 block title
@@ -24,6 +24,10 @@ block pagecontent
 	
 	+header()
 		+top-nav(2)
+	.container
+		+b.section-title
+			h1 Ждем тебя в команде
+			+e.subtitle Выберите интересующее вас направление и изучите вакансии
 	+sDirections
 	+sRequest(`не нашли то, что искали?`,`Свяжитесь с нами и мы предложим вакансию для вас`,'оставить заявку')
 	+footer()
