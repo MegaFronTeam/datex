@@ -574,6 +574,9 @@ h6 {
 		&__tel-number {
 			color: #fff !important;
 		}
+		&__row {
+			background-color: #2A3148;
+		}
 		.menu a.active, .menu a:hover {
 			@include media-breakpoint-up(xl) {
 				color: #fff;
