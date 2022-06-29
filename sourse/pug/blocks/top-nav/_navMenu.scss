@@ -10,7 +10,7 @@
 	flex-direction: column;
 	@include media-breakpoint-down(xl) {
 		align-items: center;
-		padding-bottom: rem(20);
+		padding-bottom: 20px;
 	}
 	list-style: none;
 	position: relative;
@@ -29,6 +29,9 @@
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		font-size: rem(14);
+		@include media-breakpoint-down(lg){
+			font-size: 14px;
+		}
 		color: $secondary;
 		--a-color: transparent;
 		display: block;
@@ -143,6 +146,7 @@
 		right: 0;
 		&:not(.active) {
 			transform: translate3d(120%, 0, 0);
+			// transform: translate3d(0, -120%, 0);
 			--opacity: 0;
 			.toggle-menu-mobile {
 				opacity: 0;

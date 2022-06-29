@@ -522,6 +522,7 @@ h6 {
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	transition-duration: 0.3s;
+	box-shadow: none !important;
 }
 
 .btn-primary {
@@ -770,4 +771,14 @@ h6 {
 		}
 		--sPT:#{rem(20)};
 	}
+}
+.form-wrap__input{
+	box-shadow: none !important;
+}
+.form-wrap__input-title{
+	font-family: 'Proxima Nova';
+}
+
+h3{
+	text-transform: uppercase;
 }

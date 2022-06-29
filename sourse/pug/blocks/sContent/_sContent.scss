@@ -59,6 +59,15 @@
 			}
 		}
 	}
+	.upload-field__btn{
+		width: auto;
+		display: inline-block;
+		padding-left: rem(22);
+		padding-right: rem(22);
+	}
+	.upload-field__wrap{
+		align-items: center;
+	}
 	&__body {
 		margin-bottom: rem(30);
 		padding-bottom: rem(30);
