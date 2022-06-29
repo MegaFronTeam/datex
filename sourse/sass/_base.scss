@@ -537,6 +537,8 @@ h6 {
 
 
 .main-page {
+	background-color: #252C42;
+	color: #fff;
 	&.fixed {
 		overflow: hidden !important;
 		&::before {
@@ -705,8 +707,8 @@ h6 {
 }
 
 .bg-darkest {
-	background-color: #252C42;
-	color: #fff;
+	// background-color: #252C42;
+	// color: #fff;
 }
 
 .section {

@@ -18,24 +18,36 @@
 			margin-bottom: rem(60);
 			
 		}
+		h2 {
+			@include media-breakpoint-down(sm) {
+				font-size: 2.7rem!important;
+			}
+		}
 	}
 	&__container {
 		position: relative;
 	}
 	.pencil {
 		position: absolute;
-		top: -37px;
-		right: calc(100% + 1px);
-		width: 100%;
-		max-width: rem(264);
+
+		max-width: 8rem;
+    right: calc(100% + -117px);
+    top: -37px;
+		@include media-breakpoint-up(sm) {
+			top: -37px;
+			right: calc(100% + 1px);
+			width: 100%;
+			max-width: rem(264);
+		}
 	}
 	.laptop {
 		position: absolute;
 		bottom: -42px;
     left: calc(100% + -101px);
 		width: 100%;
-		max-width: rem(304);
+		max-width: 11rem;
 		@include media-breakpoint-up(sm) {
+			max-width: rem(304);
 			bottom: -87px;
 		}
 	}
