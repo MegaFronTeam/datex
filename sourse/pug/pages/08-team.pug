@@ -12,7 +12,7 @@ include ../blocks/sTeam/_sTeam.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'team-page'
 	- let  bg= null
 
 block title
@@ -24,7 +24,7 @@ block pagecontent
 	
 	+header()
 		+top-nav(6)
-	+page-head(`приходи<br />командой`,`Расти профессионально и&nbsp;решать интересные задачи&nbsp;&mdash; удобнее вместе, мы&nbsp;знаем об&nbsp;этом не&nbsp;понаслышке.`,`08-team-bg.png`)
+	+page-head(`приходи<br />командой`,`Расти профессионально и&nbsp;решать интересные задачи&nbsp;&mdash; удобнее&nbsp;вместе,&nbsp;мы&nbsp;знаем об&nbsp;этом не&nbsp;понаслышке.`,`08-team-bg.png`)
 	+sTeam
 	+sRequest(`заинтересовало?`,`Оставьте свои контакты. Укажите сколько человек в&nbsp;вашей команде и&nbsp;какие направления вам интересны. Мы&nbsp;оперативно свяжемся с&nbsp;вами и&nbsp;расскажем о&nbsp;вариантах сотрудничества.`,'оставить заявку')
 	+footer()

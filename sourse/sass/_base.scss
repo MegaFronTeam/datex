@@ -3,13 +3,14 @@
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
-	z-index: 1000;
+	z-index: 4000;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
+	height: 200%;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	opacity: 0.7;
 	// height: 15000px;
 }
 
@@ -308,8 +309,8 @@ ul {
 	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
-	--swiperColorDefHover:#{$white};
-	--swiperBgDefHover:#{$primary};
+	--swiperColorDefHover: #{$white};
+	--swiperBgDefHover: #{$primary};
 	&:hover {
 		background-color: var(--swiperBgDefHover);
 		border-color: var(--swiperBorderColorDefHover);
@@ -317,7 +318,7 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(20);
 	}
 
 	&::after {
@@ -539,9 +540,8 @@ h6 {
 	}
 }
 
-
 .main-page {
-	background-color: #252C42;
+	background-color: #252c42;
 	color: #fff;
 	overflow-x: hidden !important;
 	overflow-y: auto !important;
@@ -554,13 +554,14 @@ h6 {
 	.toggle-menu-mobile {
 		--color: #fff;
 		&.on span {
-			&::before, &::after {
+			&::before,
+			&::after {
 				--color: #fff;
 			}
 		}
 	}
 	.top-nav {
-		border-bottom-color: #555A6D;
+		border-bottom-color: #555a6d;
 		z-index: 3;
 		color: #fff;
 		position: absolute;
@@ -575,9 +576,10 @@ h6 {
 			color: #fff !important;
 		}
 		&__row {
-			background-color: #2A3148;
+			background-color: #2a3148;
 		}
-		.menu a.active, .menu a:hover {
+		.menu a.active,
+		.menu a:hover {
 			@include media-breakpoint-up(xl) {
 				color: #fff;
 			}
@@ -622,7 +624,7 @@ h6 {
 			font-weight: 400;
 		}
 		&__link {
-			color: #ACAAC2 !important;
+			color: #acaac2 !important;
 			&:hover {
 				color: #fff !important;
 			}
@@ -652,13 +654,13 @@ h6 {
 			}
 			p {
 				@include mt;
-				font-family: 'Proxima Nova';
+				font-family: "Proxima Nova";
 				font-size: rem(14);
 				text-transform: uppercase;
 				font-weight: 600;
 				letter-spacing: 0.05em;
 				margin-bottom: 0;
-				color: #ACAAC2;
+				color: #acaac2;
 			}
 			&:hover {
 				p {
@@ -711,7 +713,7 @@ h6 {
 	}
 }
 .bg-dark {
-	background-color: #2A3148;
+	background-color: #2a3148;
 	color: #fff;
 }
 
@@ -739,30 +741,30 @@ h6 {
 	display: none;
 }
 .fancybox__content {
-	@include media-breakpoint-down(sm){
+	@include media-breakpoint-down(sm) {
 		width: 100%;
 		height: 100%;
 	}
 }
 
-.directions-page{
-	h1{
-		@include media-breakpoint-up(lg){
-			margin-bottom: rem(30);
+.directions-page {
+	h1 {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
 		}
 		margin-bottom: rem(20);
 		text-align: center;
 	}
-	.section-title {
+	.section-title--directions-page {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			padding-top: rem(100);
 		}
 		padding-top: rem(30);
 	}
-	.section-title__subtitle{
+	.section-title__subtitle {
 		@include media-breakpoint-up(lg) {
 		}
 		margin-bottom: 0;
@@ -773,25 +775,68 @@ h6 {
 	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(50)};
 	}
-	.sDirections{
-		@include media-breakpoint-up(lg){
-			--sPT:#{rem(50)};
+	.sDirections {
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(50)};
+			--sPB: #{rem(50)};
 		}
-		--sPT:#{rem(20)};
+		--sPT: #{rem(20)};
 	}
 }
-.form-wrap__input{
+.form-wrap__input {
 	box-shadow: none !important;
 }
-.form-wrap__input-title{
-	font-family: 'Proxima Nova';
+.form-wrap__input-title {
+	font-family: "Proxima Nova";
 }
 
-h3{
+h3 {
 	text-transform: uppercase;
 }
-// .fancybox__content iframe{
-// 	width: 1280px !important;
-// 	height: 720px !important;
-// 	max-width: 100%;
-// }
+
+.vacancies-page {
+	@include media-breakpoint-up(lg) {
+		.page-head__back{
+			margin-bottom: rem(27);
+		}
+		.page-head__subtitle{
+			margin-top: rem(20);
+		}
+	}
+}
+
+.about-page{
+	.sAbout__caption{
+		margin-bottom: rem(60);
+		padding-bottom: rem(35);
+	}
+	.page-head__col{
+		@include media-breakpoint-up(lg){
+			max-width: 48%;
+		}
+	}
+	.page-head__subtitle{
+		@include media-breakpoint-up(lg){
+			margin-top: rem(27);
+		}
+	}
+	p{
+		margin-bottom: rem(22);
+	}
+}
+
+.team-page{
+	.page-head__subtitle{
+		@include media-breakpoint-up(lg){
+			margin-top: rem(26);
+		}
+	}
+}
+
+.invite-page{
+	.page-head__col{
+		@include media-breakpoint-up(xl){
+			padding-right: rem(93);
+		}
+	}
+}

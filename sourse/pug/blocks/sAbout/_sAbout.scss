@@ -79,10 +79,13 @@
 			display: none;
 		}
 		border: none;
-		top: rem(-14);
+		top: rem(-26);
 	}
 	--swiperArrowSize:#{rem(50)};
 	--swiperArrowPosition:#{rem(20)};
+	p{
+		line-height: calc(20/16);
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

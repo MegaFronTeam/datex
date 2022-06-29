@@ -3,14 +3,14 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(30)};
 	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(50)};
+		--sPB: #{rem(45)};
 	}
 	// --sTPB: #{rem()};
 	&__item {
 	}
 	.vacancy-item {
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(20);
+			margin-bottom: rem(13);
 		}
 		margin-bottom: rem(10);
 		&:last-child {
@@ -52,7 +52,7 @@
 		display: flex;
 		flex-direction: column;
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(20);
+			margin-bottom: rem(17);
 			align-items: center;
 			justify-content: space-between;
 			flex-direction: row;
@@ -90,7 +90,7 @@
 		line-height: calc(20 / 16);
 		margin-bottom: rem(10);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(20);
+			margin-bottom: rem(30);
 		}
 		color: #9296a1;
 	}
@@ -104,6 +104,7 @@
 			@include media-breakpoint-up(lg) {
 				margin-right: rem(10);
 				margin-bottom: 0;
+				width: rem(158);
 			}
 			margin-bottom: rem(10);
 			&:last-child {

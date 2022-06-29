@@ -55,6 +55,11 @@
 			}
 		}
 	}
+	li{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 	&__item {
 		display: flex;
 		@include media-breakpoint-up(lg) {
