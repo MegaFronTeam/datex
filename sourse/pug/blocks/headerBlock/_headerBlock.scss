@@ -29,10 +29,10 @@
 		@include media-breakpoint-up(lg) {
 			width: auto;
 			position: absolute;
-			right: -184px;
+			right: -76px;
 			bottom: calc(((100vh - 100%) / -2));
 			// bottom: calc(((100vh - 100%) / -2) - 60px);
-			max-width: 56%;
+			max-width: 54%;
 		}
 		@include media-breakpoint-up(xl) {
 			max-width: 74%;
