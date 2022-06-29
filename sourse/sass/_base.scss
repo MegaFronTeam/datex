@@ -86,6 +86,9 @@ body {
 		&::before {
 			z-index: 999;
 			opacity: 0.76;
+			@include media-breakpoint-down(xl) {
+				top: rem(80);
+			}
 			@include media-breakpoint-down(lg) {
 				top: rem(61);
 			}
@@ -556,7 +559,7 @@ h6 {
 		top: 0;
 		left: 0;
 		width: 100%;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
 			position: fixed;
 			border-bottom: none;
 		}
@@ -564,7 +567,9 @@ h6 {
 			color: #fff !important;
 		}
 		.menu a.active, .menu a:hover {
-			color: #fff;
+			@include media-breakpoint-up(xl) {
+				color: #fff;
+			}
 		}
 	}
 	.footer {
@@ -626,9 +631,13 @@ h6 {
 			}
 			.icon {
 				flex: 0 0 auto;
-				margin-bottom: rem(20);
+				margin-bottom: rem(10);
 				color: #fff;
-				font-size: rem(30);
+				font-size: rem(23);
+				@include media-breakpoint-up(xxl) {
+					font-size: rem(30);
+					margin-bottom: rem(20);
+				}
 			}
 			p {
 				@include mt;

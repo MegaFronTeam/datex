@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js.d-xl-none
 		span
 mixin mob-mnu()
 	-
@@ -21,9 +21,9 @@ mixin top-nav(active, logoWhite)
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.row
-			.col-auto.d-lg-none
+			.col-auto.d-xl-none
 				+menu-toggle()
-			.col-lg-auto.col
+			.col-xl-auto.col
 				if logoWhite
 					+e.logo
 						a(href="/")
@@ -32,7 +32,7 @@ mixin top-nav(active, logoWhite)
 					+e.logo
 						a(href="/")
 							img(src="img/svg/logo.svg", alt="")
-			+e.col.col-lg.col-auto
+			+e.col.col-xl.col-12.order-last.order-xl-0
 				.menu-mobile.menu-mobile--js
 					.menu-mobile__inner
 						+menu-toggle()
