@@ -430,6 +430,9 @@ function eventHandler() {
 	
 			// },
 		});
+		$(document).on('click', '.footer__scroll-down', function(){
+			fullpage_api.moveSectionDown();
+		});
 	}
 
 	const sAboutWorkswiper = new Swiper('.sAboutWork__slider--js', {

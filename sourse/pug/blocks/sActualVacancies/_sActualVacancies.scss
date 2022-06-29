@@ -8,9 +8,15 @@
 	}
 	.phone {
 		position: absolute;
-		right: calc(100% + 48px);
-    top: -26px;
 		pointer-events: none;
+		right: calc(100% + -88px);
+		top: rem(53);
+    max-width: 79px;
+		@include media-breakpoint-up(sm) {
+			right: calc(100% + 48px);
+			top: -26px;
+			max-width: none;
+		}
 	}
 	.coffee {
 		position: absolute;
@@ -53,6 +59,11 @@
 		}
 		@include media-breakpoint-up(xxl) {
 			margin-bottom: rem(60);
+		}
+		h2 {
+			@include media-breakpoint-down(sm) {
+				font-size: 2.7rem!important;
+			}
 		}
 	}
 	&__col{
@@ -132,7 +143,10 @@
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		margin-bottom: rem(20);
-		color: #ACAAC2;
+		color: rgba($color: #fff, $alpha: .6);
+		@include media-breakpoint-up(sm) {
+			color: #ACAAC2;
+		}
 	}
 	h4 {
 		text-transform: uppercase;

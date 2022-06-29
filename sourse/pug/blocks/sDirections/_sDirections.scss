@@ -32,13 +32,46 @@
 		--bs-gutter-x: #{rem(10)};
 	}
 	.swiper-button-hand {
-		position: sticky;
-		display: inline-flex;
-		border: none;
 		--swiperBgDef: transparent;
 		--swiperBgDefHover: transparent;
 		--swiperArrowSize: auto;
 		--swiperColorDef: #fff;
+		display: inline-flex;
+		border: none;
+		position: sticky;
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			--swiperArrowSize: #{rem(68)};
+			--swiperBgDef: #fff;
+			--swiperColorDef: #{$body-color};
+			--swiperBgDefHover: #fff;
+			--swiperColorDefHover: #{$body-color};
+			bottom: unset;
+			top: rem(-86);
+			box-shadow: 1px 2px 13px 0px transparent;
+			&:hover {
+				box-shadow: 1px 2px 13px 0px #ffffff5e;
+			}
+		}
+		@include media-breakpoint-up(xxl) {
+				top: rem(-133);
+		}
+		&-prev {
+			@include media-breakpoint-up(lg) {
+				// left: ;
+				--swiperArrowPosition: 84%;
+			}
+			@include media-breakpoint-up(xxl) {
+				// left: ;
+				--swiperArrowPosition: 88%;
+			}
+		}
+		&-next {
+			@include media-breakpoint-up(lg) {
+				// left: ;
+				--swiperArrowPosition: 0;
+			}
+		}
 		.icon {
 			font-size: rem(20);
 		}
@@ -48,11 +81,11 @@
 		align-items: center;
 		justify-content: center;
 		padding-top: rem(20);
+	}
+	&__circle {
 		@include media-breakpoint-up(lg) {
 			display: none;
 		}
-	}
-	&__circle {
 		position: relative;
 		display: inline-block;
 		border: 2px solid #555A6D;

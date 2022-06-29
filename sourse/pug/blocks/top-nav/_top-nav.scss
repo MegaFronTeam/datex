@@ -14,6 +14,7 @@
 	padding-left: rem(20);
 	padding-right: rem(20);
 	.row {
+		align-items: center;
 		@include media-breakpoint-up(xxl) {
 			--bs-gutter-x: #{rem(4)};
 		}
@@ -25,7 +26,7 @@
 		display: flex;
 		align-items: center;
 		height: 100%;
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(xl) {
 			justify-content: center;
 		}
 		a {
@@ -56,7 +57,7 @@
 			width: rem(162);
 		}
 		@include media-breakpoint-up(lg) {
-			width: rem(108);
+			width: rem(135);
 		}
 		width: rem(32); // временно
 		display: flex;
@@ -74,7 +75,7 @@
 		line-height: 135%;
 		font-size: rem(18);
 		color: $body-color !important;
-		@include media-breakpoint-down(xxl) {
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 	}
