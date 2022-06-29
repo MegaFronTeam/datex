@@ -3,7 +3,7 @@ mixin mnu(active)
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each link,index in nav
 			if (active == index + 1)
-				li.menu-item(itemprop="item" ): a.active(href= link.url itemprop="url")= link.name
+				li.menu-item(itemprop="item" ): a.current-menu-item(href= link.url itemprop="url")= link.name
 			else
 				li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 			if link.subnav

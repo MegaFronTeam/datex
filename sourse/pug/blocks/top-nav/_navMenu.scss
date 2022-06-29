@@ -62,7 +62,7 @@
 			font-size: rem(12);
 		}
 		&:hover,
-		&.active {
+		&.current-menu-item {
 			color: $body-color;
 			--a-color: #{$primary};
 		}
