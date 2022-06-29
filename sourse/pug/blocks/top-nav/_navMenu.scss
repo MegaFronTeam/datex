@@ -141,11 +141,11 @@
 		max-width: 100%;
 		height: calc(var(--vh, 1vh) * 100);
 		width: 100%;
-		top: rem(79);
+		top: rem(82);
 		// left: 0;
 		right: 0;
 		&:not(.active) {
-			transform: translate3d(120%, 0, 0);
+			transform: translate3d(0, -120%, 0);
 			// transform: translate3d(0, -120%, 0);
 			--opacity: 0;
 			.toggle-menu-mobile {

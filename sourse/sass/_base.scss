@@ -541,6 +541,8 @@ h6 {
 .main-page {
 	background-color: #252C42;
 	color: #fff;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
 	&.fixed {
 		overflow: hidden !important;
 		&::before {
