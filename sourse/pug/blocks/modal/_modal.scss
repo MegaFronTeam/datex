@@ -51,11 +51,13 @@
 		// --line-color: transparent;
 		// --border-height: 2px;
 		// --input-size: #{rem(18)};
-		padding-top: 0;
-		padding-bottom: 0;
-		height: rem(80);
-		min-height: rem(80);
+		// padding-top: 0;
+		// padding-bottom: 0;
+		// height: rem(80);
+		// min-height: rem(80);
 		line-height: rem(19);
+		padding-bottom: calc(var(--sp-y) * 0.7);
+		padding-top: calc(var(--sp-y) * 1.5);
 	}
 	.textarea-line {
 		position: absolute;

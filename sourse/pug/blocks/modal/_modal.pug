@@ -42,9 +42,8 @@ mixin modal()
 				+input("Введите",'text','email*:')(required)
 				.form-wrap__input-wrap.form-group
 					label
-						.textarea-block
-							textarea.form-wrap__input.form-control(name='textarea' placeholder='Введите')
-							span.form-wrap__input-title комментарий:
+						textarea.form-wrap__input.form-control(name='textarea' placeholder='Введите')
+						span.form-wrap__input-title комментарий:
 							//- .textarea-line
 				+policy()
 				+e.BUTTON.btn.btn.btn-primary(type="submit") откликнуться

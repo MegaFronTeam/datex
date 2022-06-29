@@ -72,8 +72,8 @@ mixin upload-field(title)
 		+e.title.form-wrap__input-title!=title
 		+e.wrap
 			+e.input-wrap
-				input#input-upload.input-upload(type='file' name='file')
-				+e.LABEL.btn.btn.btn-outline-primary(for='input-upload')
+				+e.LABEL.btn.btn.btn-outline-primary
+					input.input-upload(type='file' name='file')
 					+icon('clip')
 					span прикрепить
 			+e.file-name Название файла.pdf
