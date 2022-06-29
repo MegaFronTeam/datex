@@ -10,7 +10,7 @@ mixin sActualVacancies(data)
 				mixin item(img, date, title, price)
 					+e.col.col-lg-6
 						+e.link(href="#")
-							img(src=`img/${img}.png`)
+							img(src=`img/${img}.png`, alt="")
 							+e.date!= date
 							h4!= title
 							+e.price
