@@ -6,5 +6,5 @@ mixin sRequest(title,caption,btn,link='#')
 				h2!=title
 			+e.caption!=caption
 			+e.btn-wrap
-				+e.btn.btn.btn-primary(href=link)!=btn
+				+e.btn.btn.btn-primary(href=link  data-src=id data-fancybox="modal")!=btn
 	// end sRequest
