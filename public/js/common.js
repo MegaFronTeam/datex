@@ -359,6 +359,10 @@ function eventHandler() {
 			992:{
 				slidesPerView: '3',
 				spaceBetween: 20,
+			},
+			768:{
+				slidesPerView: '2',
+				spaceBetween: 10,
 			}
 		},
 		navigation: {

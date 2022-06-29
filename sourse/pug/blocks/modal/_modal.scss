@@ -2,14 +2,14 @@
 	--fancybox-content-bg: none;
 }
 
-.fancybox__content {
-	padding: 0;
-	max-width: 100%;
-	height: auto !important;
-}
-.carousel__button {
-	top: rem(10) !important;
-	right: rem(12) !important;
+// .fancybox__content {
+// 	padding: 0;
+// 	max-width: 100%;
+// 	height: auto !important;
+// }
+.modal-win +.carousel__button {
+	top: rem(46) !important;
+	right: rem(46) !important;
 	color: #e5e5e5 !important;
 	filter: none !important;
 }
