@@ -4,9 +4,12 @@
 	// padding-top: 53.5px;
 	padding-bottom: 0;
 	position: relative;
+	@include media-breakpoint-down(lg) {
+		text-align: center;
+	}
 	@include media-breakpoint-up(lg) {
 		padding-top: 0;
-		background-image: url('../img/header-bg.png');
+		background-image: url('../img/svg/title.svg');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 93%;
@@ -14,39 +17,42 @@
 	&__container {
 		position: relative;
 	}
+	&__row {
+		@include media-breakpoint-up(lg) {
+			min-height: 100vh;
+		}
+	}
 	&__col {
 		position: relative;
 		z-index: 2;
-		@include media-breakpoint-down(lg) {
-			text-align: center;
+		align-self: center;
+	}
+	&__col-img {
+		align-self: flex-end;
+	}
+	&__img-wrap {
+		@include media-breakpoint-up(lg) {
+			margin-left: rem(-47);
+			text-align: right;
 		}
 	}
 	img {
-		position: relative;
-		z-index: 1;
-		width: 100%;
-		max-width: rem(846);
-		@include media-breakpoint-up(lg) {
-			width: auto;
-			position: absolute;
-			right: -76px;
-			bottom: calc(((100vh - 100%) / -2));
-			// bottom: calc(((100vh - 100%) / -2) - 60px);
-			max-width: 54%;
-		}
-		@include media-breakpoint-up(xl) {
-			max-width: 74%;
-		}
-		@include media-breakpoint-up(xxl){
-			right: -131px;
-			max-width: 74%;
-			max-width: rem(846);
+		max-height: calc(100vh - 84px);
+		@include media-breakpoint-down(lg) {
+			max-width: rem(280);
 		}
 	}
 	&__btn {
 		margin-bottom: rem(30);
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
+		}
+	}
+	&__content {
+		max-width: rem(530);
+		@include media-breakpoint-down(lg) {
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	h1 {

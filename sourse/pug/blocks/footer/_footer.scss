@@ -27,7 +27,7 @@
 		flex-direction: column;
 		width: rem(280);
 		@include media-breakpoint-up(lg){
-			padding-bottom: rem(40);
+			// padding-bottom: rem(40);
 		}
 		@include media-breakpoint-down(lg){
 			align-items: center;
