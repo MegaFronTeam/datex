@@ -7,11 +7,15 @@
 // 	max-width: 100%;
 // 	height: auto !important;
 // }
-.modal-win +.carousel__button {
-	top: rem(46) !important;
-	right: rem(46) !important;
+.modal-win + .carousel__button {
 	color: #e5e5e5 !important;
 	filter: none !important;
+	top: rem(48) !important;
+	right: rem(47) !important;
+	@include media-breakpoint-down(sm) {
+		top: rem(14) !important;
+		right: rem(14) !important;
+	}
 }
 .modal-win {
 	// display: block;
@@ -27,6 +31,8 @@
 		// min-height: 100%;
 		width: 100%;
 		height: 100%;
+		padding-left: rem(20);
+		padding-right: rem(20);
 	}
 	&__btn {
 		width: 100%;
@@ -100,7 +106,7 @@
 	.form-wrap__policy {
 		margin-top: rem(30);
 	}
-	.upload-field__btn{
+	.upload-field__btn {
 		width: auto;
 		display: inline-block;
 	}
